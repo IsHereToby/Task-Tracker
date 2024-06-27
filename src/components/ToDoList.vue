@@ -94,8 +94,8 @@
     <!-- Footer section -->
     <footer class="footer">
       <p style="color: #0d2852">
-        &copy; Zahin | GitHub:
-        <a href="https://github.com/IsHereZahin" target="blank">IsHereZahin</a>
+        &copy; Toby | GitHub:
+        <a href="https://github.com/IsHereToby" target="blank">IsHereToby</a>
       </p>
     </footer>
   </div>

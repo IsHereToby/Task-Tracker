@@ -1,0 +1,310 @@
+.app-title {
+  font-weight: bold;
+}
+
+.vuejs-color {
+  color: #41b883; /* Vue.js color */
+  font-weight: bold;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+}
+
+.app-title {
+  color: #2F415E;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.task-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(70% - 5px); /* Adjusted width to create a small gap */
+  font-size: 16px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #41b883;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-left: 5px; /* Added margin between input field and button */
+}
+
+.submit-btn:hover {
+  background-color: #16A085;
+}
+
+.submit-btn-disabled {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.submit-btn-disabled:hover {
+  background-color: #ff6d6d;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 120px; /* Fixed width for both buttons */
+}
+
+.complete-btn {
+  background-color: #2F415E; /* Dark blue color for complete tasks */
+}
+
+.complete-btn:hover{
+  background-color: #0d2852; /* Darken color on hover */
+}
+
+.incomplete-btn {
+  background-color: #41b883; /* Green color for incomplete tasks */
+}
+
+.incomplete-btn:hover {
+  background-color: #16A085; /* Darken color on hover */
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 80px; /* Fixed width for both buttons */
+}
+
+.edit-btn {
+  background-color: #ff8f20; /* Deeper orange color for edit button */
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: #e62323; /* Deeper red color for delete button */
+}
+
+.edit-btn:hover {
+  background-color: #ce6a06;
+}
+
+.delete-btn:hover {
+  background-color: #ad1b1b;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.task-table th,
+.task-table td {
+  color: #2F415E;
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.task-table th {
+  background-color: #f5f5f5;
+}
+
+.completed-task {
+  background-color: #e8e8e8; /* Light gray background for completed tasks */
+  text-decoration: line-through;
+}
+
+.incomplete-task {
+  background-color: #fff; /* White background for incomplete tasks */
+}
+
+.action-btn-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Scoped styles */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .task-table th,
+  .task-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .table-container {
+    max-height: 400px; /* Set the maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    position: relative; /* Set position to relative */
+  }
+  
+  /* Fixed header styles */
+  .task-table thead {
+    position: sticky;
+    top: 0; /* Stick the header to the top of the container */
+    background-color: #f2f2f2;
+    z-index: 1; /* Ensure the header stays above the tbody when scrolling */
+  }  
+
+
+  /* Edit and Cancel Button Styles */
+  .save-btn,
+  .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 80px; /* Fixed width for both buttons */
+  }
+
+  .save-btn {
+    background-color: #41b883; /* Green color for save button */
+    margin-right: 5px;
+  }
+
+  .cancel-btn {
+    background-color: #e62323; /* Red color for cancel button */
+  }
+
+  .save-btn:hover {
+    background-color: #16A085; /* Darken color on hover */
+  }
+
+  .cancel-btn:hover {
+    background-color: #ad1b1b; /* Darken color on hover */
+  }
+
+  .task-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100%); /* Subtract padding from the total width */
+    font-size: 16px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .task-input {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 6px 10px; /* Adjusted padding */
+    width: auto;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 12px;
+    padding: 6px 10px; /* Adjusted padding */
+    width: auto;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+/* Media query for smaller devices */
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .task-input {
+    width: 50%;
+    font-size: 12px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+    padding: 8px 12px; /* Adjusted padding */
+  }
+
+  .action-btn {
+    font-size: 10px;
+    padding: 6px 8px; /* Adjusted padding */
+    width: auto;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 10px;
+    padding: 6px 8px; /* Adjusted padding */
+    width: auto;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .footer {
+    margin-top: 5px;
+  }
+}
